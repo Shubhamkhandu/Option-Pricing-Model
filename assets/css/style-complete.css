@@ -1,0 +1,293 @@
+*{
+    margin: 0px auto;
+    padding: 0px;
+    font-family: Arial;
+}
+
+body{
+    font-family: Arial;
+    font-size: 13px;
+    background: #f6f6f6;
+}
+ul {list-style:none;}
+input[type="submit"]:active{
+    box-shadow: inset 0px 0px 3px black;
+
+}
+
+body, html {
+    height: 100%;
+}
+
+
+
+/*-------------------------INDEX PAGE CSS STARTS---------------------------------*/
+.wrapper{
+	width:100%;
+}
+
+.bg { 
+    background-image: url("../images/bg1.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*---------------------------Main HEADER WRAPPER START-------------------------------*/
+.header-wrapper{
+	width:100%;
+	background:white;
+	position: fixed;
+	top:0;
+	z-index: 10000;
+}
+.nav-container{
+	width:95%;
+	margin:0px auto;
+}
+
+.nav{
+	width:100%;
+	height:50px;
+}
+.nav ul li{
+	line-height: 50px;
+	float:left;
+	margin-right: 0px;
+	padding: 0px 10px;
+	cursor:pointer;
+	transition: all 200ms ease-in-out;
+}
+.nav ul li a{
+	color:#333;
+	text-decoration:none;
+}
+
+.nav ul li .fa-twitter{
+	margin-right: 4px;
+	color: #5ab2f5;
+	font-size: 22px;
+	position: relative;
+	top: 2px;
+}
+
+.nav-left{
+	width:50%;
+	float:left;
+}
+
+.nav-right{
+	width:50%;
+	float:right;
+}
+
+.nav-right ul {float:right;}
+
+/*---------------------------HEADER WRAPPER END-------------------------------*/
+
+.inner-wrapper{
+    width:100%;
+    margin-top: 55px;
+}
+
+.inner-wrapper-index{
+    width:100%;
+}
+
+.main-container{
+    width: 75%;
+    overflow: auto;
+}
+
+.content-left{
+    margin-top: 100px;
+    margin-left: 50px;
+    width: 50%;
+    float: left;
+    font-size: 20px;
+    color:#fff;
+}
+
+.content-right{
+    margin-top: 100px;
+    width:40%;
+    float: right;
+}
+/*-------------------------LOGIN WRAPPPER START-----------------------*/
+.login-wrapper{
+    width:100%;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #e7e7e7;
+    box-shadow: 0px 0px 10px #ccc;
+    margin: 10px;
+}
+
+.login-wrapper{
+    width: 70%;
+    float: left;
+}
+
+.login-wrapper ul li input[type="text"], .login-wrapper ul li input[type="password"]{
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 4px auto;
+    transition: all 100ms ease-in;
+}
+
+.login-wrapper ul li input[type="submit"]{
+   background-color: #2372db;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 95%;
+}
+
+.login-wrapper ul li input[type="submit"]:hover{
+    background:#1d5caf;
+}
+
+.login-wrapper ul li input[type="text"]:focus,.login-wrapper ul li input[type="password"]:focus{
+    box-shadow: 0px 0px 9px 0px #5ab2f580;
+}
+/*-------------------------LOGIN WRAPPPER ENDS-----------------------*/
+
+/*-------------------------Sign UP WRAPPPER START-----------------------*/
+
+.signup-wrapper{
+    width: 70%;
+    float: left;
+    margin: 30px 0px;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #e7e7e7;
+    box-shadow: 0px 0px 10px #ccc;
+    margin: 10px;
+}
+
+.signup-div ul li input[type="email"],.signup-div ul li input[type="password"],.signup-div ul li input[type="text"]{
+    width:95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 4px auto;
+    transition: all 100ms ease-in;
+}
+
+.signup-div ul li input[type="email"]:focus,.signup-div ul li input[type="password"]:focus,.signup-div ul li input[type="text"]:focus{
+    box-shadow: 0px 0px 9px 0px #5ab2f580;
+}
+
+.signup-div ul li input[type="submit"] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 95%;
+}
+
+.signup-div ul li input[type="submit"]:hover{
+    background:#39933d;
+}
+
+.signup-wrapper h3, .login-wrapper h3{
+    margin: 10px 0px;
+}
+/*-------------------------Sign UP WRAPPPER ends-----------------------*/
+
+.bold{
+	font-weight: bolder;
+	color: #3e3e3e;
+}
+
+.span-i{
+    background: #7fc400;
+    padding: 1px 5px;
+    border-radius: 7px;
+    border: 2px solid #fff;
+    color: #fff;
+    position: relative;
+    right: 90px;
+    top: -12px;
+    font-size: 10px;
+}
+
+
+
+.front-img img{
+	/*width: 100%;*/
+	position: fixed;
+	z-index: -1;
+	height: 100%;
+	margin-top: -20px;
+}
+
+.error-banner{
+	width: 50%;
+	height: 60px;
+	background: #fff;
+ 	position: absolute;
+	position: fixed;
+	left: 18%;
+	right: 18%;
+	top: 4.5%;
+	z-index: 1;
+	border: 1px solid #dbdbdb;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	box-shadow: 0px 0px 11px -1px #5f5f5f;
+}
+.error-banner-inner{
+	font-size: 14px;
+	padding: 10px;
+	margin: 10px auto;
+	color: #898989;
+}
+#errorMsg {
+	text-align: center;
+}
+.span-fp-error{
+	overflow: hidden;
+	padding: 10px;
+	border: 1px dashed #d89797;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: bold;
+	color: #a75858;
+}
+
+.span-pe-error{
+	overflow: hidden;
+	padding: 10px;
+	border: 1px dashed #d89797;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: bold;
+	color: #a75858;
+ 	max-width: 200px;
+ 	min-width: 60px;
+ 	margin:0px;
+}
+
+.error-li {
+	margin:20px 0px;
+}
+
+.signup-div ul li {
+	list-style: none;
+	overflow:hidden;
+}
