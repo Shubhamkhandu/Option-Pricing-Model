@@ -3,11 +3,10 @@
 	if (isset($_POST['signup'])) {
 		$fullname = $_POST['fullname'];
 		$username = $_POST['username'];
-		$password = $_POST['password'];
-		$email = $_POST['email'];
 		$signupError = "";
-	
-		if(empty($fullname) || empty($username) || empty($password) || empty($email)) {
+		$email = $_POST['email'];
+		$password = $_POST['password'];
+		if(empty($username) || empty($fullname) || empty($password) || empty($email)) {
 			$signupError = 'All feilds are required';
 		} else {
 			$email = $getFromU->checkInput($email);
@@ -17,13 +16,14 @@
 
 			if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 				$signupError = "Invalid email";
-			} elseif (strlen($fullname) > 20) {
-				$signupError = "Name must be between 6-20 characters";
 			} elseif (strlen($username) > 20) {
 				$signupError = "Username must be between 4-20 characters";
 			} elseif (strlen($password) < 5) {
 				$signupError = "Password too short";
-			} else {
+			}
+			elseif (strlen($fullname) > 20) {
+				$signupError = "Name must be between 6-20 characters";
+			}else {
 				if ($getFromU->checkEmail($email) === true) {
 					$signupError = "Email already registered";
 				} elseif ($getFromU->checkUsername($username) === true) {
