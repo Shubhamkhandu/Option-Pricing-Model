@@ -84,3 +84,37 @@ function linechart(title,data,blackschole){
 	    }
 	});
 }
+
+function display(type){
+	if(type == 1){
+		var arr = document.getElementsByClassName('btn-bar');
+		arr[1].classList.remove('btn-success');
+            	arr[1].classList.add('btn-info');
+            	arr[0].classList.add('btn-success');
+            	arr[0].classList.remove('btn-info');
+            	linechart("Call Option Comparison",call_array,call_premium);
+	}
+	else{
+		var arr = document.getElementsByClassName('btn-bar');
+		arr[0].classList.remove('btn-success');
+            	arr[0].classList.add('btn-info');
+            	arr[1].classList.add('btn-success');
+            	arr[1].classList.remove('btn-info');
+            	linechart("Put Option Comparison",put_array,put_premium);
+	}
+}
+function generateChartData(data,blackscholes) {
+    var chartData = [];
+
+    for (var i = 0; i < data.length ; i++) {
+        // we create date objects here. In your data, you can have date strings
+        // and then set format of your dates using chart.dataDateFormat property,
+        // however when possible, use date objects, as this will speed up chart rendering.
+        var obj = {};
+        obj["simulation"] = i+1;
+        obj["value"] = data[i];
+        obj["black"] = blackscholes; 
+        chartData.push(obj);
+    }
+    return chartData;
+}
